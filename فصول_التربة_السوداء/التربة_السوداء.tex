@@ -1,0 +1,89 @@
+\documentclass[14pt,a5paper]{book}
+
+% Packages
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+
+% Arabic setup
+\setdefaultlanguage[calendar=gregorian]{arabic}
+\setmainfont{Amiri}[Script=Arabic]
+
+% Spacing
+\onehalfspacing
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Remove chapter/section headers from fancy
+\renewcommand{\chaptermark}[1]{}
+\renewcommand{\sectionmark}[1]{}
+
+% Title formatting - remove "Chapter" word
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\centering}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+
+% No paragraph indent, use vertical space instead
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+% Custom separator command
+\newcommand{\sep}{\begin{center}\rule{3cm}{0.4pt}\end{center}}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\begin{center}
+\vspace*{3cm}
+
+{\Huge\bfseries التربة السوداء}
+
+\vspace{1.5cm}
+
+{\Large رواية}
+
+\vspace{3cm}
+
+{\large نصيرة تروي}
+
+\vfill
+
+{\small ٢٠٢٦}
+
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\cleardoublepage
+
+% Start page numbering
+\setcounter{page}{1}
+
+% Include all sections
+\input{القسم_١.tex}
+\clearpage
+\input{القسم_٢.tex}
+\clearpage
+\input{القسم_٣.tex}
+\clearpage
+\input{القسم_٤.tex}
+\clearpage
+\input{القسم_٥.tex}
+\clearpage
+\input{القسم_٦.tex}
+\clearpage
+\input{القسم_٧.tex}
+
+\end{document}
